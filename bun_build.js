@@ -8,4 +8,4 @@ await Bun.build({
     target: 'bun',
 });
 
-await cp(`./rust/target/release/bun_ffi.${suffix}`, `./dist/bun_ffi.${suffix}`);
+await cp(`./rust/target/release/pack_pi.${suffix}`, `./dist/pack_pi.${suffix}`);

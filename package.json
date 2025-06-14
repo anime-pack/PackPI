@@ -1,7 +1,10 @@
 {
-  "name": "bun-ffi",
+  "name": "@anime-pack/pack-pi",
   "module": "index.ts",
   "type": "module",
+  "author": {
+    "name": "dark1zinn"
+  },
   "scripts": {
     "dev": "bun up && bun test",
     "build-rs": "cd ./rust && cargo build --release",
