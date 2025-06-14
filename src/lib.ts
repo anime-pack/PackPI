@@ -10,14 +10,22 @@ if (!existsSync(libPath)) {
     throw new Error('Library file not found');
 };
 
-const lib = dlopen(libPath, {
+const { symbols } = dlopen(libPath, {
     add: {
         args: [FFIType.i32, FFIType.i32],
         returns: FFIType.i32,
     },
+    reqwest: {
+        // args: undefined,
+        returns: FFIType.void,
+    },
 });
 
 export function add(x: number, y: number): number {
-    return lib.symbols.add(x, y);
+    return symbols.add(x, y);
+};
+
+export function reqwest(): void {
+    return symbols.reqwest();
 };
 
