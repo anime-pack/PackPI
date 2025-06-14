@@ -1,0 +1,19 @@
+{
+  "name": "bun-ffi",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun up && bun test",
+    "build-rs": "cd ./rust && cargo build --release",
+    "up": "bun build-rs && bun ./bun_build.js"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "ffi-napi": "^4.0.3"
+  }
+}
